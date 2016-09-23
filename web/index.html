@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS do Bootstrap -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- Biblioteca jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- JavaScript do Bootstrap -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body> 
+        <div class="container">
+            <form class="form" action="Servlet" method="post" >
+                <h1>Cadastrar Livro</h1>
+                <div>
+                    <input name="isbn" type="text" class="form-control" placeholder="isbn do livro">
+                </div>
+                <div>
+                    <input name="titulo" type="text" class="form-control" placeholder="titulo do livro">
+                </div>
+                <div>
+                    <input name="ano" type="text" class="form-control" placeholder="ano do livro">
+                </div>
+                <div>
+                    <input name="editora" type="text" class="form-control" placeholder="editora do livro">
+                </div>
+                <div>
+                    <input name="autor" type="text" class="form-control" placeholder="autor do livro">
+                </div>
+                <div>
+                    <button name="btnCadastrar" type="submit" class="btn btn-default">Cadastrar</button>
+                    <a class="btn btn-default" href="http://localhost:49492/Livraria/ListaL.jsp" role="button">Produtos</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
