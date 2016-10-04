@@ -1,5 +1,7 @@
 package br.com.alldirect.model;
 
+import java.util.Date;
+
 public class ModelLivro {
     private int id;
     private int  ano;
@@ -7,6 +9,15 @@ public class ModelLivro {
     private String titulo;
     private String editora;
     private String autor;
+    private Date data;
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
 
     public String getIsbn() {
         return isbn;

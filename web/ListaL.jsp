@@ -4,6 +4,7 @@
     Author     : Administrador
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
 <%@page import="br.com.alldirect.model.ModelLivro"%>
 <%@page import="br.com.alldirect.dao.ControllerLivro"%>
@@ -32,9 +33,11 @@
                     <td>Ano</td>
                     <td>Editora</td>
                     <td>Autor</td>
+                    <td>Data</td>
                 </tr>
                 <%
                     ControllerLivro controllerLivro = new ControllerLivro();
+                    SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
                     List<ModelLivro> livros = controllerLivro.listaLivro();
 
                     for (ModelLivro p : livros) {
@@ -46,12 +49,13 @@
                     <td><%=p.getAno()%></td>
                     <td><%=p.getEditora()%></td>
                     <td><%=p.getAutor()%></td>
+                    <td><%=dt.format(p.getData())%></td>
                 </tr>
                 <%}%>
             </table>
         </div>
         <div class="contrainer">
-                <a class="btn btn-default" href="http://localhost:49492/Livraria/" role="button">Back</a>
+                <a class="btn btn-default" href="http://localhost:8080/LivrariaWeb/" role="button">Back</a>
         </div>
     </body>
 </html>

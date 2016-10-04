@@ -37,7 +37,7 @@ public class Servlet extends HttpServlet {
             System.out.println("Erro no Servlet: "+ex);
         }
 
-        String pagina = "http://localhost:49492/Livraria/";
+        String pagina = "http://localhost:8080/LivrariaWeb/";
         response.sendRedirect(pagina);
 
     }
