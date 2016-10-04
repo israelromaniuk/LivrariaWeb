@@ -45,6 +45,7 @@ public class ControllerLivro {
                 livro.setAno(resultSet.getInt("ANO"));
                 livro.setEditora(resultSet.getString("EDITORA"));
                 livro.setAutor(resultSet.getString("AUTOR"));
+                livro.setData(resultSet.getDate("DATA_CAD"));
                 livros.add(livro);
             }
             return livros;
