@@ -31,7 +31,7 @@ public class ControllerLivro {
         }
     }
 
-    public List<ModelLivro> listaLivro() {
+    public List<ModelLivro> getLista() {
         String sql = "SELECT * FROM LIVROS";
         List<ModelLivro> livros = new ArrayList<>();
         try {

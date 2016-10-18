@@ -1,0 +1,91 @@
+body {
+	font-family: Calibri;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.alinhaCentro {
+	text-align: center;
+}
+
+.alinhaEsquerda {
+	text-align: left;
+}
+
+.alinhaDireita {
+	text-align: right;
+}
+
+.corTitulo {
+	color: white;
+	background-color: #2F4F4F;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+td {
+	background-color: #D7D7D7;
+	color: #2F4F4F;
+}
+
+.tamCol100 {
+	width: 100px;
+}
+
+.tamCol200 {
+	width: 200px;
+}
+
+.tamCol300 {
+	width: 300px;
+}
+
+.tamCol400 {
+	width: 400px;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+a:active {
+	text-decoration: none
+}
+
+.topo {
+	background-color: #2F4F4F;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	font-size: 60px;
+	line-height: 50px;
+	color: #FFFAFA;
+	font-weight: bold;
+}
+
+.conteudo {
+	padding: 50px;
+}
+
+.rodape {
+	background-color: #2F4F4F;
+	width: 100%;
+	height: 20px;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	line-height: 20px;
+	color: #FFFFFF;
+}

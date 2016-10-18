@@ -14,6 +14,7 @@ public class ConnectionFactory {
             Class.forName("com.mysql.jdbc.Driver");
             //String url = ("jdbc:mysql://127.0.0.1/biblioteca");
             String url = ("jdbc:mysql://192.68.0.200/biblioteca");
+            //String user = ("root");
             String user = ("aluno");
             String psw = ("123456");
             connection = DriverManager.getConnection(url, user, psw);

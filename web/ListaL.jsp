@@ -4,11 +4,14 @@
     Author     : Administrador
 --%>
 
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
 <%@page import="br.com.alldirect.model.ModelLivro"%>
 <%@page import="br.com.alldirect.dao.ControllerLivro"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link rel="stylesheet" type="text/css" href="index.css">
 <!-- CSS do Bootstrap -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -24,7 +27,9 @@
         <title>Lista Livros</title>
     </head>
     <body>
-        <div class="contrainer">
+    <c:import url="Cabecalho.jsp"/>
+        <jsp:useBean id="dao" class="br.com.alldirect.dao.ControllerLivro"/>
+        <div class="contrainer conteudo" >
             <table class="table table-bordered">
                 <tr>
                     <td>Código</td>
@@ -35,27 +40,22 @@
                     <td>Autor</td>
                     <td>Data</td>
                 </tr>
-                <%
-                    ControllerLivro controllerLivro = new ControllerLivro();
-                    SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
-                    List<ModelLivro> livros = controllerLivro.listaLivro();
-
-                    for (ModelLivro p : livros) {
-                %>
+                <c:forEach var="p" items="${dao.lista}">
                 <tr>
-                    <td><%=p.getId()%></td>
-                    <td><%=p.getIsbn()%></td>
-                    <td><%=p.getTitulo()%></td>
-                    <td><%=p.getAno()%></td>
-                    <td><%=p.getEditora()%></td>
-                    <td><%=p.getAutor()%></td>
-                    <td><%=dt.format(p.getData())%></td>
+                    <td>${p.id}</td>
+                    <td>${p.isbn}</td>
+                    <td>${p.titulo}></td>
+                    <td>${p.ano}</td>
+                    <td>${p.editora}</td>
+                    <td>${p.autor}</td>
+                    <td><fmt:formatDate value="${p.data}" pattern="dd/MM/yyyy"/></td>
                 </tr>
-                <%}%>
+                </c:forEach>
             </table>
         </div>
         <div class="contrainer">
                 <a class="btn btn-default" href="http://localhost:8080/LivrariaWeb/" role="button">Back</a>
         </div>
+        <c:import url="Rodape.jsp"/>
     </body>
 </html>
